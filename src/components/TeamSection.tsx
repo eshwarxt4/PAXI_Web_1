@@ -1,17 +1,19 @@
 import { Card, CardContent } from "@/components/ui/card";
+import akhilPhoto from "@/assets/Team-Akhil.png";
+import eshwarPhoto from "@/assets/Team-Eshwar.png";
 
 const team = [
   {
     name: "Korra Akhil Chowhan",
     education: "IIM Ahmedabad",
     role: "Product & strategy champion, focused on simplifying pet-parent workflows.",
-    initials: "KC",
+    image: akhilPhoto,
   },
   {
     name: "Banoth Eshwar Naik",
     education: "IIT Kharagpur",
     role: "Technical lead with expertise in scalable platforms and clinical data structuring.",
-    initials: "BN",
+    image: eshwarPhoto,
   },
 ];
 
@@ -40,11 +42,12 @@ const TeamSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-8 text-center">
-                {/* Avatar placeholder */}
-                <div className="w-24 h-24 rounded-full bg-gradient-teal mx-auto mb-6 flex items-center justify-center shadow-teal">
-                  <span className="text-2xl font-bold text-primary-foreground">
-                    {member.initials}
-                  </span>
+                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 shadow-teal border-4 border-white">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 <h3 className="text-xl font-bold text-foreground mb-2">
@@ -64,7 +67,7 @@ const TeamSection = () => {
         {/* Mission statement */}
         <div className="text-center max-w-3xl mx-auto">
           <blockquote className="text-xl lg:text-2xl text-foreground italic leading-relaxed">
-            "PAXI is built by pet lovers and technologists committed to making veterinary care 
+            "PAXI is built by pet lovers and technologists committed to making veterinary care
             clearer, faster, and more accessible."
           </blockquote>
         </div>

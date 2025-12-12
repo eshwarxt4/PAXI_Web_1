@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
+import logo from "@/assets/logo.png";
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,16 +24,15 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-card/95 backdrop-blur-md shadow-card py-3"
           : "bg-transparent py-5"
-      }`}
+        }`}
     >
       <div className="container-custom">
         <nav className="flex items-center justify-between">
           <a href="#" className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-primary">PAXI</span>
+            <img src={logo} alt="PAXI" className="h-10 w-auto" />
           </a>
 
           {/* Desktop Navigation */}

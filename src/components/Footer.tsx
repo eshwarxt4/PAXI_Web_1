@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import logo from "@/assets/logo.png";
 
 const footerLinks = {
   product: [
@@ -27,14 +28,14 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <span className="text-2xl font-bold text-primary mb-4 block">
-              PAXI
-            </span>
+            <a href="#" className="inline-block mb-4">
+              <img src={logo} alt="PAXI" className="h-12 w-auto" />
+            </a>
             <p className="text-accent-foreground/70 leading-relaxed max-w-sm mb-6">
-              Transforming pet healthcare through structured communication between 
+              Transforming pet healthcare through structured communication between
               pet parents and veterinarians.
             </p>
-            
+
             {/* Social icons */}
             <div className="flex gap-4">
               {["twitter", "linkedin", "instagram", "facebook"].map((social) => (
